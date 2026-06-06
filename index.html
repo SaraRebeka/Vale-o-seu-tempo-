@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>O Seu Tempo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>⏳ Vale O Seu Tempo?</h1>
+    <p>Um jogo sobre as escolhas que moldam quem você se torna.</p>
+  </header>
+
+  <div class="container">
+    <main id="game-root">
+
+      <!-- Barra de progresso -->
+      <div class="progress-wrap" id="progress-wrap">
+        <div class="progress-label">
+          <span>PROGRESSO</span>
+          <span id="progress-text">0/5 MOMENTOS</span>
+        </div>
+        <div class="progress-track">
+          <div class="progress-fill" id="progress-fill" style="width: 0%"></div>
+        </div>
+      </div>
+
+      <!-- Card da cena -->
+      <div class="scene-card" id="scene-card">
+        <div class="chapter-tag" id="chapter-tag"></div>
+        <h2 id="scene-title"></h2>
+        <p id="scene-text"></p>
+
+        <!-- Opções de escolha -->
+        <div class="choices" id="choices"></div>
+
+        <!-- Feedback após escolha -->
+        <div class="feedback-box hidden" id="feedback-box"></div>
+        <button class="btn-next hidden" id="btn-next">próximo momento &rarr;</button>
+      </div>
+
+      <!-- Tela de resultado (oculta inicialmente) -->
+      <div class="result-card hidden" id="result-card">
+        <div class="result-title">ANÁLISE DO DIA</div>
+        <p class="result-sub" id="result-sub"></p>
+        <div class="stats-grid" id="stats-grid"></div>
+        <div class="reflection-box" id="reflection-box"></div>
+        <p class="insight">
+          ⚡ O tempo é o único recurso que não se recupera.<br />
+          Cada escolha pequena, repetida ao longo dos anos, constrói uma vida.
+        </p>
+        <button class="btn-restart" id="btn-restart">↺ &nbsp; jogar novamente</button>
+      </div>
+
+    </main>
+  </div>
+
+  <footer>
+    <p>Feito para te fazer pensar — não para te julgar. (Mas se a carapuça servir, né? Quem sou eu? Melhore. - De eu, pra mim mesma.) By : <a href="https://github.com/SaraRebeka">SaraRebeka</a></p>
+  </footer>
+
+  <script src="game.js"></script>
+</body>
+</html>
